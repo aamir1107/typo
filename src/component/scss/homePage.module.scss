@@ -1,0 +1,329 @@
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1200px;
+
+
+    .homePage {
+
+
+
+        .auditSection {
+
+            background: linear-gradient(107.35deg, rgba(196, 196, 196, 0) 20.83%, rgba(47, 128, 237, 0.09) 78.13%);
+            height: 513px;
+            width: 100%;
+            margin-top: 7px;
+            display: flex;
+
+            .auditLeftSection {
+                padding-left: 50px;
+
+                .auditHeading {
+                    width: 471px;
+                    height: 122px;
+                    padding-top: 94px;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 50px;
+                    line-height: 61px;
+                    color: #333333;
+
+                    span {
+                        color: #2F80ED;
+                    }
+                }
+
+                .getStartedButtonSection {
+                    padding-top: 30px;
+
+                    .getStartedButton {
+                        height: 48px;
+                        width: 189px;
+                        background: #BB6BD9;
+                        font-weight: 700;
+                        font-size: 13px;
+                        line-height: 24px;
+                        font-family: 'Inter';
+                        font-style: normal;
+
+
+                    }
+                }
+
+                .auditPointList {
+                    width: 600px;
+
+
+                    .auditPointFirstSentance {
+                        display: flex;
+
+
+                        .PointSection {
+                            display: flex;
+
+
+                            .circle {
+                                height: 8px;
+                                width: 8px;
+                                border: 1px solid #2D9CDB;
+                                border-radius: 50%;
+                                background: #2D9CDB;
+                                margin-top: 46px;
+                            }
+
+                            .point {
+                                width: 200px;
+                                height: 18px;
+                                font-family: 'Inter';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 15px;
+                                line-height: 18px;
+                                color: #555555;
+                                margin-left: 4px;
+                                margin-top: 42px;
+
+                            }
+                        }
+
+                    }
+
+                    .auditPointSecondSentance {
+                        width: 660px;
+                        display: flex;
+
+                        .PointSection {
+                            display: flex;
+
+                            .circle {
+                                height: 8px;
+                                width: 8px;
+                                border: 1px solid #2D9CDB;
+                                border-radius: 50%;
+                                background: #2D9CDB;
+                                margin-top: 19px;
+                            }
+
+                            .point {
+                                width: 200px;
+                                height: 18px;
+                                font-family: 'Inter';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 15px;
+                                line-height: 18px;
+                                color: #555555;
+                                margin-left: 4px;
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .auditRightSection {
+                margin-top: 96px;
+                margin-left: 90px;
+            }
+        }
+
+        .middleSection {
+
+            margin: 150px;
+
+            .templateSection {
+                display: flex;
+
+
+
+                .templateLeftSection {
+
+
+                    .templateHeading {
+                        width: 456px;
+                        height: 74px;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 25px;
+                        line-height: 30px;
+                        color: #555555;
+                    }
+
+                    .templateParagraph {
+                        width: 456px;
+                        height: 72px;
+                        margin-top: 10px;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 18px;
+                        display: flex;
+                        align-items: center;
+                        color: #555555;
+                    }
+
+                    .templateStartedButtonSection {
+
+
+                        .templateStartedButton {
+                            height: 40px;
+                            width: 150px;
+                            background: #BB6BD9;
+                            font-weight: 700;
+                            margin-top: 12px;
+                            font-size: 12px;
+                            line-height: 24px;
+                            font-family: 'Inter';
+                            font-style: normal;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+
+                .templateRightSection {
+                    .templateImage {
+                        img {
+                            width: 300px;
+                            height: 200px;
+                            margin-left: 121px;
+                        }
+                    }
+
+                }
+            }
+
+            .timerSection {
+                width: 856px;
+                height: 200px;
+                margin-top: 125px;
+                display: flex;
+                flex-wrap: wrap;
+
+                .timerleftSection {
+                    .timerImageSection {
+                        img {
+                            width: 300px;
+                            height: 200px;
+                        }
+
+                    }
+                }
+
+                .timerRightSection {
+                    margin-left: 141px;
+
+                    .timerHeadingSection {
+
+                        width: 415px;
+                        height: 30.02px;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 25px;
+                        line-height: 30px;
+                        color: #555555;
+                    }
+
+                    .timerParagraphSection {
+                        width: 415px;
+                        height: 36px;
+                        margin-top: 20px;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: #555555;
+                    }
+
+                    .timmerButtonSection {
+                        margin-top: 30px;
+
+                        .timerStartedButton {
+
+                            height: 40px;
+                            width: 150px;
+                            background: #BB6BD9;
+                            font-weight: 700;
+                            margin-top: 12px;
+                            font-size: 12px;
+                            line-height: 24px;
+                            font-family: 'Inter';
+                            font-style: normal;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+
+            .resultSection {
+                margin-top: 106px;
+                width: 852px;
+                height: 200px;
+                display: flex;
+                flex-wrap: wrap;
+
+                .resultLeftSection {
+                    .resultHeadingSection {
+
+                        width: 415px;
+                        height: 30.02px;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 25px;
+                        line-height: 30px;
+                        color: #555555;
+                    }
+
+                    .resultParagraphSection {
+                        width: 415px;
+                        height: 36px;
+                        margin-top: 20px;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: #555555;
+                    }
+
+                    .resultButtonSection {
+                        margin-top: 30px;
+
+                        .resultStartedButton {
+                            height: 40px;
+                            width: 150px;
+                            background: #BB6BD9;
+                            font-weight: 700;
+                            margin-top: 12px;
+                            font-size: 12px;
+                            line-height: 24px;
+                            font-family: 'Inter';
+                            font-style: normal;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+
+                .resultRightSection {
+                    .resultImageSection {
+                        img {
+                            width: 300px;
+                            height: 200px;
+                            margin-left: 121px;
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+
+    }
+}

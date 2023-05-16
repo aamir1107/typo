@@ -1,0 +1,105 @@
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1200px;
+
+    .templateSection {
+        display: flex;
+
+
+
+        .template {
+            height: 199px;
+            width: calc(100% - 46%);
+            margin-left: 101px;
+            margin-top: 100px;
+            border-radius: 5px;
+            box-shadow: 0px 1px 4px 2px rgba(153, 153, 153, 0.25);
+            user-select: none;
+
+
+
+
+            .templateTime {
+
+                text-align: end;
+                margin-right: 35px;
+                padding-top: 10px;
+            }
+
+            .templateContent {
+                margin: 0 auto;
+                height: 150px;
+                width: 583px;
+                text-align: justify;
+                overflow: hidden;
+                margin-top: 10px;
+                flex-wrap: wrap;
+
+                .templateBlue {
+                    color: blue;
+                }
+
+                .templateRed {
+                    color: red;
+                }
+            }
+        }
+
+        .graphSection {
+            width: 450px;
+            text-align: center;
+            margin-top: 100px;
+
+
+        }
+
+
+    }
+
+    .writtenSection {
+        margin-left: 101px;
+        margin-top: 50px;
+
+        .textWrittenSection {
+            width: calc(100% - 41%);
+            box-shadow: 0px 1px 4px 2px rgba(153, 153, 153, 0.25);
+        }
+
+
+    }
+
+    .buttonsSection {
+
+        display: flex;
+        flex-direction: row;
+        gap: 475px;
+        margin-bottom: 100px;
+
+
+        .resetAndCancleButton {
+            .resetButton {
+
+
+                width: 168px;
+                height: 40px;
+                margin-top: 50px;
+                background: #4F4F4F;
+                border-radius: 5px;
+
+            }
+
+        }
+
+        .submitButtonSection {
+            .submitButton {
+                gap: 10px;
+                width: 168px;
+                height: 40px;
+                margin-top: 50px;
+                background: #4F4F4F;
+                border-radius: 5px;
+            }
+        }
+    }
+}
