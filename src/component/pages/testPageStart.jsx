@@ -77,7 +77,7 @@ function TestPageStart() {
     }
 
     const similar = (a, b) => {
-
+        //jhvsadhgvyus
         setIsTimerStarted(false)
         let equivalency = 0;
         let minLength = (a.length > b.length) ? b.length : a.length;
