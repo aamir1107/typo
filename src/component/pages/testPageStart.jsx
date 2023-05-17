@@ -7,6 +7,26 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import FotterSection from './fotterSection'
 import { formatDuration } from '../../utils/timeUtil'
+import { CountdownCircleTimer } from "react-countdown-circle-timer";
+
+
+
+const renderTime = ({ remainingTime }, total) => {
+    if (remainingTime === 0) {
+        return <div className={classes.timer} style={{
+            color: "red",
+        }}>Too lale...</div>;
+    }
+
+    return (
+        <div className={classes.timer}>
+
+            <div className={classes.value}>{Math.floor((remainingTime / total) * 100)}%</div>
+
+        </div>
+    );
+};
+
 
 
 function TestPageStart() {
@@ -48,6 +68,8 @@ function TestPageStart() {
 
     }
 
+
+
     return (
         <div className={classes.testPageStart}>
 
@@ -77,7 +99,15 @@ function TestPageStart() {
                 </div>
 
                 <div className={classes.graphSection}>
-                    aamir
+                    <CountdownCircleTimer className={classes.countDown}
+                        isPlaying
+                        duration={selectedTemplate.timeDuration}
+                        colors={["#004777", "#F7B801", "#A30000", "#A30000", "#DB7093", "#FFA07A", "#FF0000"]}
+                        colorsTime={[500, 400, 300, 200, 100, 50, 10]}
+                        onComplete={() => ({ shouldRepeat: false, delay: 1 })}
+                    >
+                        {(e) => renderTime(e, selectedTemplate.timeDuration)}
+                    </CountdownCircleTimer>
                 </div>
 
             </div>
