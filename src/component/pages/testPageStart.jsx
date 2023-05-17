@@ -37,7 +37,8 @@ function TestPageStart() {
     const [referencaArray, setReferencaArray] = useState([]);
     const [matchArray, setMatchArray] = useState([]);
     const [typeText, setTypeText] = useState("")
-
+    const [showTimer, setShowTimer] = useState(true);
+    const [isTimerStarted, setIsTimerStarted] = useState(false);
 
     useEffect(() => {
 
@@ -57,10 +58,17 @@ function TestPageStart() {
     const resetData = () => {
         setTypeText("")
         setMatchArray([])
+        setIsTimerStarted(false)
+        setShowTimer(false)
+        setTimeout(() => {
+            setShowTimer(true)
+        }, 300)
+
     }
 
 
     const handleTextEnter = (e) => {
+        setIsTimerStarted(true)
         setTypeText(e.target.value)
         if (typeText) {
             setMatchArray(typeText.split(" "))
@@ -68,6 +76,22 @@ function TestPageStart() {
 
     }
 
+    const similar = (a, b) => {
+
+        setIsTimerStarted(false)
+        let equivalency = 0;
+        let minLength = (a.length > b.length) ? b.length : a.length;
+        let maxLength = (a.length < b.length) ? b.length : a.length;
+        for (let i = 0; i < minLength; i++) {
+            if (a[i] == b[i]) {
+                equivalency++;
+            }
+        }
+
+
+        let weight = equivalency / maxLength;
+        return alert(Math.floor(weight * 100) + "%");
+    }
 
 
     return (
@@ -97,18 +121,18 @@ function TestPageStart() {
                     </div>
 
                 </div>
-
-                <div className={classes.graphSection}>
-                    <CountdownCircleTimer className={classes.countDown}
-                        isPlaying
-                        duration={selectedTemplate.timeDuration}
-                        colors={["#004777", "#F7B801", "#A30000", "#A30000", "#DB7093", "#FFA07A", "#FF0000"]}
-                        colorsTime={[500, 400, 300, 200, 100, 50, 10]}
-                        onComplete={() => ({ shouldRepeat: false, delay: 1 })}
-                    >
-                        {(e) => renderTime(e, selectedTemplate.timeDuration)}
-                    </CountdownCircleTimer>
-                </div>
+                {showTimer ?
+                    <div className={classes.graphSection}>
+                        <CountdownCircleTimer className={classes.countDown}
+                            isPlaying={isTimerStarted}
+                            duration={selectedTemplate.timeDuration}
+                            colors={["#004777", "#F7B801", "#A30000", "#A30000", "#DB7093", "#FFA07A", "#FF0000"]}
+                            colorsTime={[500, 400, 300, 200, 100, 50, 10]}
+                            onComplete={() => ({ shouldRepeat: false, delay: 1 })}
+                        >
+                            {(e) => renderTime(e, selectedTemplate.timeDuration)}
+                        </CountdownCircleTimer>
+                    </div> : null}
 
             </div>
 
@@ -137,7 +161,7 @@ function TestPageStart() {
 
                 <div className={classes.submitButtonSection}>
                     <Button variant="contained" className={classes.submitButton}
-
+                        onClick={() => similar(selectedTemplate.text, typeText)}
                     >
                         Submit
                     </Button>
